@@ -22,15 +22,13 @@ module.exports = {
   app_files: {
     js: [ 'src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js' ],
     jsunit: [ 'src/**/*.spec.js' ],
-    
-    coffee: [ 'src/**/*.coffee', '!src/**/*.spec.coffee' ],
-    coffeeunit: [ 'src/**/*.spec.coffee' ],
 
     atpl: [ 'src/app/**/*.tpl.html' ],
     ctpl: [ 'src/common/**/*.tpl.html' ],
 
     html: [ 'src/index.html' ],
-    less: 'src/less/main.less'
+    sass: 'src/sass/main.scss',
+    cssdest: '<%= build_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.css'
   },
 
   /**
@@ -69,6 +67,8 @@ module.exports = {
       'vendor/angular-ui-utils/modules/route/route.js'
     ],
     css: [
+    'vendor/bootstrap/docs/assets/css/bootstrap.css',
+    'vendor/bootstrap/docs/assets/css/bootstrap-responsive.css'
     ],
     assets: [
     ]
